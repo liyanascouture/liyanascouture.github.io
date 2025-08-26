@@ -137,3 +137,55 @@ footer {
   background: #333;
   color: #fff;
 }
+.flower {
+  position: absolute;
+  top: -50px;
+  width: 25px;
+  height: 25px;
+  background: url("https://i.ibb.co/Yc7k0Md/flower.png") no-repeat center/cover;
+  animation: fall linear infinite;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(110vh);
+  }
+}
+/* Dropdown */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #fff;
+  min-width: 200px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  list-style: none;
+  padding: 0.5rem 0;
+  display: none;
+  z-index: 999;
+}
+
+.dropdown-menu li {
+  padding: 0.5rem 1rem;
+}
+
+.dropdown-menu li a {
+  color: #333;
+  text-decoration: none;
+  display: block;
+  transition: background 0.3s;
+}
+
+.dropdown-menu li a:hover {
+  background: #fce4ec;
+  color: #b22222;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
