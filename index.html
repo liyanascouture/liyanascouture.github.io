@@ -84,3 +84,130 @@ export default function LiyaanasCouture() {
     </div>
   );
 }
+
+            import { useState } from "react";
+import { motion } from "framer-motion";
+import { ShoppingBag, Heart, Search, Menu } from "lucide-react";
+import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+
+export default function LiyaanasCouture() {
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [products] = useState([
+    { id: 1, name: "Embroidered Cotton Kurta", price: "$40", img: "https://via.placeholder.com/300x400" },
+    { id: 2, name: "3 Piece Embroidered Lawn Suit", price: "$63", img: "https://via.placeholder.com/300x400" },
+    { id: 3, name: "2 Piece Printed Linen Suit", price: "$23", img: "https://via.placeholder.com/300x400" },
+  ]);
+
+  const categories = [
+    "Ready to Wear",
+    "Luxury Formal",
+    "Luxury Pret",
+    "Menswear",
+    "Kids",
+    "Unstitched",
+    "Accessories",
+    "Jewelry",
+  ];
+
+  return (
+    <div className="bg-gradient-to-b from-pink-50 to-white min-h-screen font-sans">
+      {/* Navbar */}
+      <nav className="flex items-center justify-between px-6 py-4 bg-white shadow-md sticky top-0 z-50">
+        <h1 className="text-2xl font-bold tracking-wide text-pink-600">Liyaana's Couture</h1>
+        <div className="flex space-x-4 text-gray-700 items-center">
+          <Search />
+          <Heart />
+          <ShoppingBag />
+          <Menu onClick={() => setMenuOpen(!menuOpen)} className="cursor-pointer" />
+        </div>
+      </nav>
+
+      {/* Side Menu */}
+      {menuOpen && (
+        <motion.div
+          initial={{ x: "100%" }}
+          animate={{ x: 0 }}
+          exit={{ x: "100%" }}
+          className="fixed top-0 right-0 w-64 h-full bg-white shadow-2xl p-6 z-50"
+        >
+          <h2 className="text-xl font-bold mb-4 text-pink-700">Shop Categories</h2>
+          <ul className="space-y-3">
+            {categories.map((cat, idx) => (
+              <li key={idx} className="hover:text-pink-600 cursor-pointer">{cat}</li>
+            ))}
+          </ul>
+
+          <div className="mt-8 border-t pt-4">
+            <h3 className="text-lg font-semibold text-gray-700 mb-2">Track Your Order</h3>
+            <input
+              type="text"
+              placeholder="Enter Order ID"
+              className="w-full border rounded-lg px-3 py-2 mb-3"
+            />
+            <Button className="w-full bg-pink-600 hover:bg-pink-700 text-white">Track</Button>
+          </div>
+        </motion.div>
+      )}
+
+      {/* Hero Section */}
+      <motion.section
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
+        className="text-center py-16 bg-[url('https://www.transparenttextures.com/patterns/flowers.png')] bg-cover"
+      >
+        <h2 className="text-4xl font-bold text-pink-700">Bloom With Elegance 🌸</h2>
+        <p className="text-gray-600 mt-3">Discover luxury outfits designed for every occasion</p>
+        <Button className="mt-5 bg-pink-600 hover:bg-pink-700 text-white px-6 py-2 rounded-full shadow-lg">Shop Now</Button>
+      </motion.section>
+
+      {/* Product Grid */}
+      <section className="px-6 py-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+        {products.map((p) => (
+          <motion.div
+            key={p.id}
+            whileHover={{ scale: 1.05 }}
+            className="rounded-2xl shadow-lg overflow-hidden bg-white"
+          >
+            <Card>
+              <CardContent className="p-0">
+                <img src={p.img} alt={p.name} className="w-full h-80 object-cover" />
+                <div className="p-4 text-center">
+                  <h3 className="font-semibold text-lg">{p.name}</h3>
+                  <p className="text-pink-600 font-bold">{p.price}</p>
+                  <Button className="mt-3 bg-pink-600 hover:bg-pink-700 text-white w-full rounded-full">Add to Cart</Button>
+                </div>
+              </CardContent>
+            </Card>
+          </motion.div>
+        ))}
+      </section>
+
+      {/* Newsletter */}
+      <motion.section
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 1 }}
+        className="text-center py-12 bg-pink-50"
+      >
+        <h3 className="text-2xl font-bold text-pink-700">Sign Up for Our Newsletter</h3>
+        <p className="text-gray-600 mt-2">Stay updated with the latest arrivals and offers</p>
+        <div className="mt-4 flex justify-center">
+          <input
+            type="email"
+            placeholder="Enter your email"
+            className="px-4 py-2 rounded-l-full border border-gray-300 w-72"
+          />
+          <Button className="rounded-r-full bg-pink-600 hover:bg-pink-700 text-white">Subscribe</Button>
+        </div>
+      </motion.section>
+
+      {/* Footer */}
+      <footer className="bg-white text-gray-700 text-center py-6 border-t mt-6">
+        <p>© {new Date().getFullYear()} Liyaana's Couture. All Rights Reserved.</p>
+        <p className="text-sm">Contact: liyaanas.couture@example.com</p>
+      </footer>
+    </div>
+  );
+}
