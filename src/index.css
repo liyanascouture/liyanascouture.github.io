@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Smooth fonts + nicer scroll */
+html { scroll-behavior: smooth; }
+body { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+
+/* Small utility for a soft card shadow */
+.card {
+  @apply rounded-3xl border bg-white shadow-lg;
+}
+
+/* Badge style for cart count */
+.badge {
+  @apply absolute -top-2 -right-2 text-xs px-1.5 py-0.5 rounded-full bg-pink-600 text-white;
+}
