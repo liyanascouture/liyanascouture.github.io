@@ -1,72 +1,112 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Liyana’s Couture | Pakistani Clothing Brand</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liyanas Couture</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-  <!-- Header / Navbar -->
-  <header>
-    <div class="logo">Liyana’s Couture</div>
-    <nav>
-      <a href="#home">Home</a>
-      <a href="#collections">Collections</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <h1>Liyanas Couture</h1>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#collection">Collection</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#cart"><i class="fa fa-shopping-cart"></i> Cart (<span id="cart-count">0</span>)</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-  <!-- Hero Section -->
-  <section id="home" class="hero">
-    <img src="images/hero.jpg" alt="Pakistani clothing hero">
-    <div class="hero-text">
-      <h1>Elegance in Every Thread</h1>
-      <p>Discover our latest Pakistani clothing collections</p>
-      <a href="#collections" class="btn">Shop Now</a>
-    </div>
-  </section>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <h2>Elegant Pakistani Clothing for Women</h2>
+            <p>Timeless designs with tradition and style.</p>
+            <a href="#collection" class="btn">Shop Now</a>
+        </div>
+    </section>
 
-  <!-- Collections -->
-  <section id="collections">
-    <h2>Our Collections</h2>
-    <div class="gallery">
-      <div class="item">
-        <img src="images/outfit1.jpg" alt="Outfit 1">
-        <h3>Festive Wear</h3>
-      </div>
-      <div class="item">
-        <img src="images/outfit2.jpg" alt="Outfit 2">
-        <h3>Casual Wear</h3>
-      </div>
-      <div class="item">
-        <img src="images/outfit3.jpg" alt="Outfit 3">
-        <h3>Bridal Wear</h3>
-      </div>
-    </div>
-  </section>
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <h2>About Liyanas Couture</h2>
+            <p>Liyanas Couture is a Pakistani women's clothing brand dedicated to providing elegant, high-quality, and stylish traditional and modern outfits for every occasion.</p>
+        </div>
+    </section>
 
-  <!-- About -->
-  <section id="about">
-    <h2>About Us</h2>
-    <p>
-      Liyana’s Couture is a Pakistani clothing brand bringing modern designs 
-      with a touch of tradition. Every outfit tells a story of culture, heritage, 
-      and elegance. We create timeless pieces for every occasion.
-    </p>
-  </section>
+    <!-- Collection Section -->
+    <section id="collection">
+        <div class="container">
+            <h2>Our Collection</h2>
+            <div class="carousel">
+                <button class="prev">&#10094;</button>
+                <div class="carousel-track">
+                    <div class="product-card">
+                        <img src="images/product1.jpg" alt="Shalwar Kameez">
+                        <h3>Shalwar Kameez</h3>
+                        <p>Elegant embroidered shalwar kameez</p>
+                        <span class="price">PKR 4,500</span>
+                        <button class="add-to-cart" data-name="Shalwar Kameez" data-price="4500">Add to Cart</button>
+                    </div>
+                    <div class="product-card">
+                        <img src="images/product2.jpg" alt="Designer Saree">
+                        <h3>Designer Saree</h3>
+                        <p>Luxury fabric with exquisite designs</p>
+                        <span class="price">PKR 7,200</span>
+                        <button class="add-to-cart" data-name="Designer Saree" data-price="7200">Add to Cart</button>
+                    </div>
+                    <div class="product-card">
+                        <img src="images/product3.jpg" alt="Lehenga">
+                        <h3>Lehenga</h3>
+                        <p>Perfect for weddings and special events</p>
+                        <span class="price">PKR 12,000</span>
+                        <button class="add-to-cart" data-name="Lehenga" data-price="12000">Add to Cart</button>
+                    </div>
+                </div>
+                <button class="next">&#10095;</button>
+            </div>
+        </div>
+    </section>
 
-  <!-- Contact -->
-  <section id="contact">
-    <h2>Contact Us</h2>
-    <p>Email: info@liyanascouture.com</p>
-    <p>Instagram: @liyanascouture</p>
-  </section>
+    <!-- Cart Section -->
+    <section id="cart">
+        <div class="container">
+            <h2>Your Cart</h2>
+            <div id="cart-items"></div>
+            <p id="cart-total">Total: PKR 0</p>
+        </div>
+    </section>
 
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2025 Liyana’s Couture. All rights reserved.</p>
-  </footer>
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <p>For inquiries or orders, email us at: <a href="mailto:liyanascouture@gmail.com">liyanascouture@gmail.com</a></p>
+            <form id="contact-form">
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Liyanas Couture. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
