@@ -1,14 +1,71 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Liyaana's Couture</title>
-    <meta name="description" content="Liyaana's Couture — Pakistani clothing brand. Elegant pret, luxury formals, menswear, kids, jewelry & accessories."/>
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌸</text></svg>">
-  </head>
-  <body class="bg-white">
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Liyaana's Couture</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="logo">Liyaana's Couture</div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Shop</a></li>
+        <li><a href="#">Collections</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <h1>Elegance Redefined</h1>
+    <p>Discover Pakistani fashion with a modern touch</p>
+    <a href="#shop" class="btn">Shop Now</a>
+  </section>
+
+  <!-- Products -->
+  <section id="shop" class="products">
+    <h2>Our Best Sellers</h2>
+    <div class="product-grid">
+      <div class="product-card">
+        <img src="https://via.placeholder.com/300x400" alt="Product 1">
+        <h3>Embroidered Lawn Suit</h3>
+        <p>$49</p>
+      </div>
+      <div class="product-card">
+        <img src="https://via.placeholder.com/300x400" alt="Product 2">
+        <h3>Luxury Pret</h3>
+        <p>$75</p>
+      </div>
+      <div class="product-card">
+        <img src="https://via.placeholder.com/300x400" alt="Product 3">
+        <h3>Men's Kurta</h3>
+        <p>$40</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter -->
+  <section class="newsletter">
+    <h2>Stay Updated</h2>
+    <form>
+      <input type="email" placeholder="Enter your email" required />
+      <button type="submit">Subscribe</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Liyaana's Couture | Contact: lianaskhichor@gmail.com</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
 </html>
