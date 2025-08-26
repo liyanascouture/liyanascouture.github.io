@@ -1,112 +1,86 @@
+import { useState } from "react";
+import { motion } from "framer-motion";
+import { ShoppingBag, Heart, Search } from "lucide-react";
+import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Liyanas Couture</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-</head>
-<body>
-    <!-- Header -->
-    <header>
-        <div class="container">
-            <h1>Liyanas Couture</h1>
-            <nav>
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#collection">Collection</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                    <li><a href="#cart"><i class="fa fa-shopping-cart"></i> Cart (<span id="cart-count">0</span>)</a></li>
-                </ul>
-            </nav>
+export default function LiyaanasCouture() {
+  const [products] = useState([
+    { id: 1, name: "Embroidered Cotton Kurta", price: "$40", img: "https://via.placeholder.com/300x400" },
+    { id: 2, name: "3 Piece Embroidered Lawn Suit", price: "$63", img: "https://via.placeholder.com/300x400" },
+    { id: 3, name: "2 Piece Printed Linen Suit", price: "$23", img: "https://via.placeholder.com/300x400" },
+  ]);
+
+  return (
+    <div className="bg-gradient-to-b from-pink-50 to-white min-h-screen font-sans">
+      {/* Navbar */}
+      <nav className="flex items-center justify-between px-6 py-4 bg-white shadow-md sticky top-0 z-50">
+        <h1 className="text-2xl font-bold tracking-wide text-pink-600">Liyaana's Couture</h1>
+        <div className="flex space-x-4 text-gray-700">
+          <Search />
+          <Heart />
+          <ShoppingBag />
         </div>
-    </header>
+      </nav>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="container">
-            <h2>Elegant Pakistani Clothing for Women</h2>
-            <p>Timeless designs with tradition and style.</p>
-            <a href="#collection" class="btn">Shop Now</a>
-        </div>
-    </section>
+      {/* Hero Section */}
+      <motion.section
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
+        className="text-center py-16 bg-[url('https://www.transparenttextures.com/patterns/flowers.png')] bg-cover"
+      >
+        <h2 className="text-4xl font-bold text-pink-700">Bloom With Elegance 🌸</h2>
+        <p className="text-gray-600 mt-3">Discover luxury outfits designed for every occasion</p>
+        <Button className="mt-5 bg-pink-600 hover:bg-pink-700 text-white px-6 py-2 rounded-full shadow-lg">Shop Now</Button>
+      </motion.section>
 
-    <!-- About Section -->
-    <section id="about">
-        <div class="container">
-            <h2>About Liyanas Couture</h2>
-            <p>Liyanas Couture is a Pakistani women's clothing brand dedicated to providing elegant, high-quality, and stylish traditional and modern outfits for every occasion.</p>
-        </div>
-    </section>
-
-    <!-- Collection Section -->
-    <section id="collection">
-        <div class="container">
-            <h2>Our Collection</h2>
-            <div class="carousel">
-                <button class="prev">&#10094;</button>
-                <div class="carousel-track">
-                    <div class="product-card">
-                        <img src="images/product1.jpg" alt="Shalwar Kameez">
-                        <h3>Shalwar Kameez</h3>
-                        <p>Elegant embroidered shalwar kameez</p>
-                        <span class="price">PKR 4,500</span>
-                        <button class="add-to-cart" data-name="Shalwar Kameez" data-price="4500">Add to Cart</button>
-                    </div>
-                    <div class="product-card">
-                        <img src="images/product2.jpg" alt="Designer Saree">
-                        <h3>Designer Saree</h3>
-                        <p>Luxury fabric with exquisite designs</p>
-                        <span class="price">PKR 7,200</span>
-                        <button class="add-to-cart" data-name="Designer Saree" data-price="7200">Add to Cart</button>
-                    </div>
-                    <div class="product-card">
-                        <img src="images/product3.jpg" alt="Lehenga">
-                        <h3>Lehenga</h3>
-                        <p>Perfect for weddings and special events</p>
-                        <span class="price">PKR 12,000</span>
-                        <button class="add-to-cart" data-name="Lehenga" data-price="12000">Add to Cart</button>
-                    </div>
+      {/* Product Grid */}
+      <section className="px-6 py-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+        {products.map((p) => (
+          <motion.div
+            key={p.id}
+            whileHover={{ scale: 1.05 }}
+            className="rounded-2xl shadow-lg overflow-hidden bg-white"
+          >
+            <Card>
+              <CardContent className="p-0">
+                <img src={p.img} alt={p.name} className="w-full h-80 object-cover" />
+                <div className="p-4 text-center">
+                  <h3 className="font-semibold text-lg">{p.name}</h3>
+                  <p className="text-pink-600 font-bold">{p.price}</p>
+                  <Button className="mt-3 bg-pink-600 hover:bg-pink-700 text-white w-full rounded-full">Add to Cart</Button>
                 </div>
-                <button class="next">&#10095;</button>
-            </div>
-        </div>
-    </section>
+              </CardContent>
+            </Card>
+          </motion.div>
+        ))}
+      </section>
 
-    <!-- Cart Section -->
-    <section id="cart">
-        <div class="container">
-            <h2>Your Cart</h2>
-            <div id="cart-items"></div>
-            <p id="cart-total">Total: PKR 0</p>
+      {/* Newsletter */}
+      <motion.section
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 1 }}
+        className="text-center py-12 bg-pink-50"
+      >
+        <h3 className="text-2xl font-bold text-pink-700">Sign Up for Our Newsletter</h3>
+        <p className="text-gray-600 mt-2">Stay updated with the latest arrivals and offers</p>
+        <div className="mt-4 flex justify-center">
+          <input
+            type="email"
+            placeholder="Enter your email"
+            className="px-4 py-2 rounded-l-full border border-gray-300 w-72"
+          />
+          <Button className="rounded-r-full bg-pink-600 hover:bg-pink-700 text-white">Subscribe</Button>
         </div>
-    </section>
+      </motion.section>
 
-    <!-- Contact Section -->
-    <section id="contact">
-        <div class="container">
-            <h2>Contact Us</h2>
-            <p>For inquiries or orders, email us at: <a href="mailto:liyanascouture@gmail.com">liyanascouture@gmail.com</a></p>
-            <form id="contact-form">
-                <input type="text" placeholder="Your Name" required>
-                <input type="email" placeholder="Your Email" required>
-                <textarea placeholder="Your Message" required></textarea>
-                <button type="submit">Send Message</button>
-            </form>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 Liyanas Couture. All Rights Reserved.</p>
-        </div>
-    </footer>
-
-    <script src="script.js"></script>
-</body>
-</html>
+      {/* Footer */}
+      <footer className="bg-white text-gray-700 text-center py-6 border-t mt-6">
+        <p>© {new Date().getFullYear()} Liyaana's Couture. All Rights Reserved.</p>
+        <p className="text-sm">Contact: liyaanas.couture@example.com</p>
+      </footer>
+    </div>
+  );
+}
