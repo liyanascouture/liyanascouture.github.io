@@ -1,17 +1,22 @@
-/* Custom Card Styles */
-.card {
-    border: none;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
+/* Style for Card Images */
 .card-img-top {
     object-fit: cover;
-    height: 250px; /* Adjust height as needed */
+    height: 300px; /* Adjust the height of the images */
     transition: transform 0.3s ease;
 }
 
 .card-img-top:hover {
-    transform: scale(1.1); /* Slight zoom effect on hover */
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+/* Style for Product Section */
+#product-list .card {
+    border: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card-body {
+    text-align: center;
 }
 
 /* Custom Button Styles */
