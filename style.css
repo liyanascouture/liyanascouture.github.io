@@ -1540,3 +1540,10 @@ a.btn-link.text-light:after {
   background-size: cover;
   transition: transform .3s ease-out;
 }
+/* Importing Lora Font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap');
+
+/* Applying the font to the body */
+body {
+    font-family: 'Lora', serif;
+}
