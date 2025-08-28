@@ -36,7 +36,7 @@
                 <!-- Product 1 -->
                 <div class="col-md-4 mb-4">
                     <div class="card">
-                        <img src="assets/images/dress1.jpg" class="card-img-top" alt="Pakistani Dress 1">
+                        <img src="class="card-img-top" alt="Pakistani Dress 1">
                         <div class="card-body">
                             <h5 class="card-title">Embroidered Anarkali Dress</h5>
                             <p class="card-text">A traditional yet stylish embroidered Anarkali dress, perfect for weddings and festivals.</p>
@@ -49,7 +49,7 @@
                 <!-- Product 2 -->
                 <div class="col-md-4 mb-4">
                     <div class="card">
-                        <img src="assets/images/dress2.jpg" class="card-img-top" alt="Pakistani Dress 2">
+                        <img src="="card-img-top" alt="Pakistani Dress 2">
                         <div class="card-body">
                             <h5 class="card-title">Chikan Kari Kurta</h5>
                             <p class="card-text">Delicate Chikan Kari embroidery on a soft cotton kurta, ideal for casual outings or celebrations.</p>
@@ -62,7 +62,7 @@
                 <!-- Product 3 -->
                 <div class="col-md-4 mb-4">
                     <div class="card">
-                        <img src="assets/images/dress3.jpg" class="card-img-top" alt="Pakistani Dress 3">
+                        <img src="IMG_3273.jpgclass="card-img-top" alt="Pakistani Dress 3">
                         <div class="card-body">
                             <h5 class="card-title">Luxury Silk Saree</h5>
                             <p class="card-text">A rich silk saree with intricate golden work, perfect for weddings and special events.</p>
@@ -75,7 +75,7 @@
                 <!-- Product 4 -->
                 <div class="col-md-4 mb-4">
                     <div class="card">
-                        <img src="assets/images/dress4.jpg" class="card-img-top" alt="Pakistani Dress 4">
+                        <img src="IMG_3272.jpgclass="card-img-top" alt="Pakistani Dress 4">
                         <div class="card-body">
                             <h5 class="card-title">Embroidered Lehenga Choli</h5>
                             <p class="card-text">A beautifully embroidered lehenga choli set, ideal for weddings and festive occasions.</p>
