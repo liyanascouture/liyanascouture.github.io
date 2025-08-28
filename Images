@@ -36,6 +36,11 @@
     </div>
 </section>
 
+.hero {
+    background-image: url('assets/images/hero-bg.jpg');
+    background-size: cover;
+    background-position: center;
+}
 /* Hover effect on product images */
 .card-img-top {
     transition: transform 0.3s ease;
