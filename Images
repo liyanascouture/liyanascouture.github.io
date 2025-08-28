@@ -1,51 +1,125 @@
-<section id="products" class="py-5">
-    <div class="container">
-        <h2 class="text-center mb-4">Shop Our Latest Collection</h2>
-        <div class="row">
-            <div class="col-md-4">
-                <div class="card">
-                    <img src="assets/images/product1.jpg" class="card-img-top" alt="Product 1">
-                    <div class="card-body">
-                        <h5 class="card-title">Embroidered Kurta</h5>
-                        <p class="card-text">Beautifully embroidered, perfect for any occasion.</p>
-                        <button class="btn btn-primary">Add to Cart</button>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Liyaana's Couture - Pakistani Dresses</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="#">Liyaana's Couture</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="product.html">Shop</a></li>
+                    <li class="nav-item"><a class="nav-link" href="checkout.html">Cart</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Product Display Section -->
+    <section id="product-list" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Shop Our Latest Pakistani Dress Collection</h2>
+            <div class="row">
+                <!-- Product 1 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="assets/images/dress1.jpg" class="card-img-top" alt="Pakistani Dress 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Embroidered Anarkali Dress</h5>
+                            <p class="card-text">A traditional yet stylish embroidered Anarkali dress, perfect for weddings and festivals.</p>
+                            <p class="card-text"><strong>₹4,500</strong></p>
+                            <button class="btn btn-primary">Add to Cart</button>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card">
-                    <img src="assets/images/product2.jpg" class="card-img-top" alt="Product 2">
-                    <div class="card-body">
-                        <h5 class="card-title">Luxury Silk Saree</h5>
-                        <p class="card-text">A blend of tradition and luxury in one piece.</p>
-                        <button class="btn btn-primary">Add to Cart</button>
+
+                <!-- Product 2 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="assets/images/dress2.jpg" class="card-img-top" alt="Pakistani Dress 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Chikan Kari Kurta</h5>
+                            <p class="card-text">Delicate Chikan Kari embroidery on a soft cotton kurta, ideal for casual outings or celebrations.</p>
+                            <p class="card-text"><strong>₹2,200</strong></p>
+                            <button class="btn btn-primary">Add to Cart</button>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card">
-                    <img src="assets/images/product3.jpg" class="card-img-top" alt="Product 3">
-                    <div class="card-body">
-                        <h5 class="card-title">Designer Lehenga Choli</h5>
-                        <p class="card-text">Exclusive design for weddings and festivals.</p>
-                        <button class="btn btn-primary">Add to Cart</button>
+
+                <!-- Product 3 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="assets/images/dress3.jpg" class="card-img-top" alt="Pakistani Dress 3">
+                        <div class="card-body">
+                            <h5 class="card-title">Luxury Silk Saree</h5>
+                            <p class="card-text">A rich silk saree with intricate golden work, perfect for weddings and special events.</p>
+                            <p class="card-text"><strong>₹7,000</strong></p>
+                            <button class="btn btn-primary">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 4 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="assets/images/dress4.jpg" class="card-img-top" alt="Pakistani Dress 4">
+                        <div class="card-body">
+                            <h5 class="card-title">Embroidered Lehenga Choli</h5>
+                            <p class="card-text">A beautifully embroidered lehenga choli set, ideal for weddings and festive occasions.</p>
+                            <p class="card-text"><strong>₹10,500</strong></p>
+                            <button class="btn btn-primary">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 5 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="assets/images/dress5.jpg" class="card-img-top" alt="Pakistani Dress 5">
+                        <div class="card-body">
+                            <h5 class="card-title">Cotton Print Suit</h5>
+                            <p class="card-text">A soft and breathable cotton suit with traditional prints, perfect for the summer season.</p>
+                            <p class="card-text"><strong>₹1,200</strong></p>
+                            <button class="btn btn-primary">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 6 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="assets/images/dress6.jpg" class="card-img-top" alt="Pakistani Dress 6">
+                        <div class="card-body">
+                            <h5 class="card-title">Pakistani Sharara Set</h5>
+                            <p class="card-text">A luxurious Sharara set with intricate mirror work, perfect for formal events.</p>
+                            <p class="card-text"><strong>₹5,800</strong></p>
+                            <button class="btn btn-primary">Add to Cart</button>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-.hero {
-    background-image: url('assets/images/hero-bg.jpg');
-    background-size: cover;
-    background-position: center;
-}
-/* Hover effect on product images */
-.card-img-top {
-    transition: transform 0.3s ease;
-}
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3">
+        <p>© 2025 Liyaana’s Couture | <a href="mailto:liyaanas.couture@gmail.com" class="text-light">Contact Us</a></p>
+    </footer>
 
-.card-img-top:hover {
-    transform: scale(1.05);
-}
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
